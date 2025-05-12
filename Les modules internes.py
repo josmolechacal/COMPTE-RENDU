@@ -1,4 +1,4 @@
-"""#Exercice 1 : Générateur de mot de passe
+#Exercice 1 : Générateur de mot de passe
 import random
 import string
 
@@ -39,9 +39,10 @@ longueur = int(input("\nEntrez la longueur du mot de passe : "))
 mot_de_passe = generate_password(longueur)
 print("Le mot de passe généré est de longueur", longueur)
 # On affiche le mot de passe généré
-print("Mot de passe généré :", mot_de_passe)"""
+print("Mot de passe généré :", mot_de_passe)
 
-"""#Exercice 2 : Gestion de date et de l'heure
+
+#Exercice 2 : Gestion de date et de l'heure
 from datetime import datetime, timedelta
 
 
@@ -68,7 +69,7 @@ date2_str = input("Entrez la deuxième date (jj/mm/aaaa) : ")
 date1 = datetime.strptime(date1_str, "%d/%m/%Y")
 date2 = datetime.strptime(date2_str, "%d/%m/%Y")
 difference = abs((date2 - date1).days)
-print('\nLa différence entre les deux dates est de: ', difference, 'jours')"""
+print('\nLa différence entre les deux dates est de: ', difference, 'jours')
 
 
 #Exercice 3 : Création d'un module simple de calculatrice
@@ -109,8 +110,3 @@ print("\nMerci d'avoir utilisé la calculatrice !")
 # On affiche un message de fin
 print("--------------------------------------------------------")
 
-# Exercice 4 : Organisation d'un module 
-
-#1 création d'un module géométrie avec deux sous-modules : cercle et rectangle
-#2 Dans chaque sous-module, on définit des fonctions pour calculer l'aire et le périmètre
-#3 Importez et utiliser ses fonctions depuis un fichier principal
