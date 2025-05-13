@@ -110,3 +110,64 @@ print("\nMerci d'avoir utilisé la calculatrice !")
 # On affiche un message de fin
 print("--------------------------------------------------------")
 
+#Exercice 5: Modules avec variables et constantes
+
+# conversion.py
+# Importation du module conversion 
+
+#import complet
+import conversion
+
+
+print("\nBienvenue dans le module de conversion !")
+print("-------------------------------------------")
+
+
+celsius = conversion.fahrenheit_vers_celsius(98.6)
+fahrenheit = conversion.celsius_vers_fahrenheit(37)
+pi = conversion.PI
+gravite = conversion.GRAVITE
+print("\nLa température de 98.6°F est équivalente à", celsius, "°C")
+print("\nLa température de 37°C est équivalente à", fahrenheit, "°F")
+print("\nLa valeur de PI est :", pi)
+print("\nLa valeur de la gravité est :", gravite)
+
+
+#Exercice 7: Gestions des erreurs dans un module 
+# calculatrice.py
+import calculatrice_exo7_ges_erreur
+
+# On affiche un message de bienvenue
+print("\nBienvenue dans la calculatrice !")
+print("--------------------------------")
+
+#utilisation de try/except pour gérer les erreurs(types inncorrects/division par zéro)
+try:
+    # On demande à l'utilisateur de choisir une opération
+    print("\nChoisissez une opération :")
+    print("\n1. Addition")
+    print("\n2. Soustraction")
+    print("\n3. Multiplication")
+    print("\n4. Division")
+    choix = input("\nEntrez le numéro de l'opération souhaitée (1/2/3/4): ")
+    #on doit tester si le choix est correcte
+    if choix not in ['1', '2', '3', '4']:
+        raise ValueError("impossible de choisir cette opération")
+    else: 
+        # On demande à l'utilisateur de saisir deux nombres
+        a = float(input("\nEntrez le premier nombre : "))
+        b = float(input("\nEntrez le deuxième nombre : "))
+        # On effectue l'opération choisie
+        if choix == '1':
+           print("\nLe résultat de l'addition est :", calculatrice_exo7_ges_erreur.addition(a, b))
+        elif choix == '2':
+           print("\nLe résultat de la soustraction est :", calculatrice_exo7_ges_erreur.soustraction(a, b))
+        elif choix == '3':
+           print("\nLe résultat de la multiplication est :", calculatrice_exo7_ges_erreur.multiplication(a, b))
+        elif choix == '4':
+           print("\nLe résultat de la division est :", calculatrice_exo7_ges_erreur.division(a, b))
+except ValueError:
+    print("\nErreur: Type de données incorrect.") 
+except ZeroDivisionError:
+    print("\nErreur: Division par zéro.")
+
